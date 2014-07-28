@@ -13,4 +13,16 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+
+    #import "Category.h"
+
+
+#endif
+
+
+
+#if kEnvironment==0
+#define NSLog(...) {}
+#else
+#define NSLog(...) NSLog(__VA_ARGS__)
 #endif
